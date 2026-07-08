@@ -1,0 +1,20 @@
+lidar_cloud_fusion_node:
+  ros__parameters:
+    # LiDAR 360 en LaserScan
+    scan_topic: "/scan"
+
+    # LiDAR avant / AS-DT1 en PointCloud2
+    cloud_topic: "/front_cloud"
+
+    # Cloud fusionné envoyé vers elevation_mapping
+    output_topic: "/merged_cloud"
+
+    # Frame commun de sortie
+    # base_link = pratique pour une elevation map locale autour du robot
+    # odom = mieux si tu veux une cloud stabilisée dans le monde local
+    target_frame: "base_link"
+
+    publish_rate: 10.0
+
+    # Si un capteur n'a pas publié depuis plus de 0.5 s, il n'est pas utilisé
+    max_data_age: 0.5
