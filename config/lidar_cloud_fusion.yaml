@@ -4,7 +4,7 @@ lidar_cloud_fusion_node:
     scan_topic: "/scan"
 
     # LiDAR avant / AS-DT1 en PointCloud2
-    cloud_topic: "/front_cloud"
+    cloud_topic: "/as_dt1/points"
 
     # Cloud fusionné envoyé vers elevation_mapping
     output_topic: "/merged_cloud"
